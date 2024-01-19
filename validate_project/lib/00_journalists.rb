@@ -71,8 +71,8 @@ def class_length
     min = ALL_JOURNALIST.min_by(&:length).length # ---DEFINE THE START AND END LOOP
     max = ALL_JOURNALIST.max_by(&:length).length #----|
 
-    for caracter in (min..max) do   #min and max give the value by incrementation to caracter and we do -1 to simulate delete the @
-        sorted_handle_group[caracter - 1] = ALL_JOURNALIST.count{|handle| caracter == handle.length} #PUSH THE KEY CARACTER AND HIS VALUE IN THE HASHE SORTED HANDLE GROUP
+    for iteration in (min..max) do   #min and max give the value by incrementation to caracter and we do -1 to simulate delete the @
+        sorted_handle_group[iteration - 1] = ALL_JOURNALIST.count{|handle| iteration == handle.length} #PUSH THE KEY CARACTER AND HIS VALUE IN THE HASHE SORTED HANDLE GROUP
     end
 puts "Voici les élément trier par leur nombr de caractere"
 puts sorted_handle_group.inspect
@@ -83,6 +83,7 @@ end
 # short_name
 # number_letter(COEFF)
 # uppercase_list
+# abc_list
 # ascending_list
 # find_position
 # class_length
